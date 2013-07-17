@@ -1,0 +1,20 @@
+== HEAD
+
+== 1.0.3 (July 17, 2013)
+
+* add MIT license
+* add CHANGELOG.md
+* Modification of _normalize.scss to make use of [John Albin's Sass+Compass version of normalize](https://github.com/JohnAlbin/normalize.css-with-sass-or-compass)
+
+== 1.0.2 (July 10, 2013)
+
+* jQuery updated to version 1.10.2
+
+== 1.0.1 (June 06, 2013)
+
+* jQuery update
+* folder img/ added
+
+== 1.0.0 (June 02, 2013)
+
+* creation
