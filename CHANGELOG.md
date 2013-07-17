@@ -9,6 +9,7 @@
 * add CHANGELOG.md
 * Modification of _normalize.scss to make use of [John Albin's Sass+Compass version of normalize](https://github.com/JohnAlbin/normalize.css-with-sass-or-compass)
 * Indentation revised to fit my taste
+* Add exemple of a webfont use
 
 ### 1.0.2 (July 10, 2013)
 

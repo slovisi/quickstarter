@@ -7,6 +7,9 @@ css_dir = "css"
 sass_dir = "scss"
 images_dir = "img"
 javascripts_dir = "js"
+# Uncomment the following line if you use webfonts, 
+# change the value to reflect your own structure
+# fonts_dir = "font"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
