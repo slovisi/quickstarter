@@ -35,6 +35,12 @@ $legacy-support-for-ie6: true !default; // Override default set in Compass' Supp
 // Set this to true to add support for IE 7.
 $legacy-support-for-ie7: true !default; // Override default set in Compass' Support partial.
 
+
+// Debug mode
+$debug-mode: false !default;
+$debug-error-color: red;
+$debug-warning-color: yellow;
+
 // After the default variables are set, import the required Compass partials.
 @import "compass/support";
 @import "compass/css3"; //

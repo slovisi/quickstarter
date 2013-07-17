@@ -9,7 +9,8 @@
 * add CHANGELOG.md
 * Modification of _normalize.scss to make use of [John Albin's Sass+Compass version of normalize](https://github.com/JohnAlbin/normalize.css-with-sass-or-compass)
 * Indentation revised to fit my taste
-* Add exemple of a webfont use
+* add exemple of a webfont use
+* add debug partial based on [inuit.css](https://github.com/csswizardry/inuit.css) debug partial (lightly modified)
 
 ### 1.0.2 (July 10, 2013)
 
