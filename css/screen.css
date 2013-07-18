@@ -1,3 +1,73 @@
+/**
+ * Webfont use case
+ * font-face($name, $font-files, $eot, $weight, $style)
+ * Cross-browser support for @font-face. Supports IE, Gecko, Webkit, Opera.
+ * 
+ * $name is required, arbitrary, and what you will use in font stacks.
+ * $font-files is required using font-files('relative/location', 'format'). 
+ * for best results use this order: woff, opentype/truetype, svg
+ * $eot is required by IE, and is a relative location of the eot file.
+ * $weight shows if the font is bold, defaults to normal
+ * $style defaults to normal, might be also italic
+ * For android 2.2 Compatiblity, please ensure that your web page has 
+ * a meta viewport tag.
+ * To support iOS < 4.2, an SVG file must be provided
+ * If you need to generate other formats check out the Font Squirrel font generator
+ * 
+ * In order to refer to a specific style of the font in your stylesheets 
+ * as e.g. "font-style: italic;", you may add a couple of @font-face includes 
+ * containing the respective font files for each style and specying respective 
+ * the $style parameter. Order of the includes matters, and it is: normal, bold,
+ * italic, bold+italic. 
+ */
+@font-face {
+  font-family: "PTSans";
+  src: url('../font/PTS55F-webfont.eot');
+  src: url('../font/PTS55F-webfont.eot?#iefix') format('eot'), url('../font/PTS55F-webfont.woff') format('woff'), url('../font/PTS55F-webfont.ttf') format('truetype'), url('../font/PTS55F-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src: url('../font/PTS75F-webfont.eot');
+  src: url('../font/PTS75F-webfont.eot?#iefix') format('eot'), url('../font/PTS75F-webfont.woff') format('woff'), url('../font/PTS75F-webfont.ttf') format('truetype'), url('../font/PTS75F-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src: url('../font/PTS56F-webfont.eot');
+  src: url('../font/PTS56F-webfont.eot?#iefix') format('eot'), url('../font/PTS56F-webfont.woff') format('woff'), url('../font/PTS56F-webfont.ttf') format('truetype'), url('../font/PTS56F-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src: url('../font/PTS76F-webfont.eot');
+  src: url('../font/PTS76F-webfont.eot?#iefix') format('eot'), url('../font/PTS76F-webfont.woff') format('woff'), url('../font/PTS76F-webfont.ttf') format('truetype'), url('../font/PTS76F-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PTSansNarrow";
+  src: url('../font/PTN57F-webfont.eot');
+  src: url('../font/PTN57F-webfont.eot?#iefix') format('eot'), url('../font/PTN57F-webfont.woff') format('woff'), url('../font/PTN57F-webfont.ttf') format('truetype'), url('../font/PTN57F-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSansNarrow";
+  src: url('../font/PTN77F-webfont.eot');
+  src: url('../font/PTN77F-webfont.eot?#iefix') format('eot'), url('../font/PTN77F-webfont.woff') format('woff'), url('../font/PTN77F-webfont.ttf') format('truetype'), url('../font/PTN77F-webfont.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
 /* normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* normalize.scss v2.1.2 | MIT/GPLv2 License | bit.ly/normalize-with-compass */
 /* ==========================================================================
@@ -64,7 +134,7 @@ audio:not([controls]) {
  */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_normalize\.scss}line{font-family:\0000371}}
 html {
-  font-family: Helvetica, Verdana, Arial, sans-serif;
+  font-family: "PTSansNarrow", Helvetica, Verdana, Arial, sans-serif;
   /* 1 */
   font-size: 100%;
   /* 3 */
@@ -83,7 +153,7 @@ button,
 input,
 select,
 textarea {
-  font-family: Helvetica, Verdana, Arial, sans-serif;
+  font-family: "PTSansNarrow", Helvetica, Verdana, Arial, sans-serif;
 }
 
 /**
@@ -662,13 +732,19 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\0000396}}
+.main-wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 /*
  * Image replacement
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003123}}
 .ir {
   background-color: transparent;
   border: 0;
@@ -677,7 +753,7 @@ textarea {
   *text-indent: -9999px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003128}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003131}}
 .ir:before {
   content: "";
   display: block;
@@ -688,7 +764,7 @@ textarea {
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003142}}
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -697,7 +773,7 @@ textarea {
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003151}}
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -713,7 +789,7 @@ textarea {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003165}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003168}}
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -727,7 +803,7 @@ textarea {
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003178}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003181}}
 .invisible {
   visibility: hidden;
 }
@@ -743,7 +819,7 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003195}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003198}}
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -752,7 +828,7 @@ textarea {
   /* 2 */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003200}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003203}}
 .clearfix:after {
   clear: both;
 }
@@ -761,7 +837,7 @@ textarea {
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003209}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003212}}
 .clearfix {
   *zoom: 1;
 }
@@ -782,7 +858,7 @@ textarea {
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003236}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003239}}
   * {
     background: transparent !important;
     color: #000 !important;
@@ -791,18 +867,18 @@ textarea {
     text-shadow: none !important;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003244}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003247}}
   a,
   a:visited {
     text-decoration: underline;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003248}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003251}}
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003252}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003255}}
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -810,33 +886,33 @@ textarea {
   /*
    * Don't show links for images, or javascript/internal links
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003262}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003265}}
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003267}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003270}}
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003272}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003275}}
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003277}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003280}}
   tr,
   img {
     page-break-inside: avoid;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003281}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003284}}
   img {
     max-width: 100% !important;
   }
@@ -845,7 +921,7 @@ textarea {
     margin: 0.5cm;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003291}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003294}}
   p,
   h2,
   h3 {
@@ -853,7 +929,7 @@ textarea {
     widows: 3;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003297}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/slovisi\/Sites\/quickstarter\/scss\/partials\/_boilerplate-defaults\.scss}line{font-family:\00003300}}
   h2,
   h3 {
     page-break-after: avoid;
