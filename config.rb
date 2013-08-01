@@ -11,6 +11,9 @@ javascripts_dir = "js"
 # change the value to reflect your own structure
 fonts_dir = "font"
 
+# environment = :development or :production
+environment = :production
+
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
 output_style = (environment == :production) ? :compressed : :expanded

@@ -1,5 +1,9 @@
 ### HEAD
 
+### 1.0.4 (August 01, 2013)
+
+* partials structure modified
+
 ### 1.0.3 (July 17, 2013)
 
 * Base font family defined
